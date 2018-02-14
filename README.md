@@ -2,6 +2,8 @@
 
 Javascript checking library.
 
+[![NPM](https://nodei.co/npm/@abhaydgarg/is.png?downloads=true)](https://nodei.co/npm/@abhaydgarg/is/)
+
 ## Installation
 
 ```sh
@@ -14,7 +16,7 @@ npm install --save @abhaydgarg/is
 # all
 npm run test
 
-# one file
+# single file
 FILE=is-string.test.js npm run test-file
 ```
 
@@ -30,85 +32,71 @@ import { isEmpty, isString } from '@abhaydgarg/is';
 
 ## API
 
-### isArray(value)
+### Type check
+
+#### isArray(value)
 
 Check if `value` is of type `Array`.
 
-### isBoolean(value)
+#### isBoolean(value)
 
 Check if `value` is of type `boolean`.
 
-### isDate(value)
+#### isDate(value)
 
 Check if `value` is of type `Date`.
 
-### isError(value)
+#### isError(value)
 
 Check if `value` is of type `Error`.
 
-### isFunction(value)
+#### isFunction(value)
 
 Check if `value` is of type `function`.
 
-### isMap(value)
+#### isMap(value)
 
 Check if `value` is of type `Map`.
 
-### isNullOrUndefined(value)
-
-Check if `value` is either `null` or `undefined`.
-
-### isNull(value)
-
-Check if `value` is `null`.
-
-### isNumber(value)
+#### isNumber(value)
 
 Check if `value` is of type `number`.
 
-### isNumeric(value)
-
-Check if `value` is numeric.
-
-```javascript
-isNumeric(1234567890); // true
-isNumeric('1234567890'); // true
-isNumeric('-123'); // true
-isNumeric('1.23'); // true
-isNumeric('Infinity'); // true
-isNumeric('0xFF') // true
-isNumeric('123e5');  // true
-```
-
-### isObject(value)
+#### isObject(value)
 
 Check if `value` is of type `object`.
 
-### isRegEx(value)
+#### isRegEx(value)
 
 Check if `value` is of type `RegExp`.
 
-### isSet(value)
+#### isSet(value)
 
 Check if `value` is of type `Set`.
 
-### isString(value)
+#### isString(value)
 
 Check if `value` is of type `string`.
 
-### isSymbol(value)
+#### isSymbol(value)
 
 Check if `value` is of type `symbol`.
 
-### isUndefined(value)
+#### isUndefined(value)
 
 Check if `value` is `undefined`.
 
-### isWhitespace(value)
+#### isNull(value)
 
-Check if `value` of type `string` is whitespace.
+Check if `value` is `null`.
 
-### isEmpty(value)
+#### isNullOrUndefined(value)
+
+Check if `value` is either `null` or `undefined`.
+
+### Presence check
+
+#### isEmpty(value)
 
 Check if `value` is empty.
 
@@ -142,6 +130,26 @@ isEmpty(' ') // whitespace consider not empty
 isEmpty(0, 'zero'), // consider number 0 empty.
 isEmpty(' ', 'whitespace') // consider whitespace string empty
 ```
+
+### Value check
+
+#### isNumeric(value)
+
+Check if `value` is numeric.
+
+```javascript
+isNumeric(1234567890); // true
+isNumeric('1234567890'); // true
+isNumeric('-123'); // true
+isNumeric('1.23'); // true
+isNumeric('Infinity'); // true
+isNumeric('0xFF') // true
+isNumeric('123e5');  // true
+```
+
+#### isWhitespace(value)
+
+Check if `value` of type `string` is whitespace.
 
 ## License
 
