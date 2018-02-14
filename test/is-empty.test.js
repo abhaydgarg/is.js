@@ -14,9 +14,9 @@ describe('isEmpty [/src/is-empty.js]', function () {
         isEmpty(new Set()),
         isEmpty(new Map()),
         isEmpty({}),
-        isEmpty(0, 'zero'), // consider number 0 empty
+        isEmpty(0),
         isEmpty(''),
-        isEmpty(' ', 'whitespace') // consider whitespace empty
+        isEmpty('   ')
       ],
       [
         true,
@@ -30,19 +30,6 @@ describe('isEmpty [/src/is-empty.js]', function () {
         true,
         true,
         true
-      ]
-    );
-  });
-
-  it('all should not be empty', function () {
-    chai.assert.deepEqual(
-      [
-        isEmpty(0),
-        isEmpty(' ')
-      ],
-      [
-        false,
-        false
       ]
     );
   });

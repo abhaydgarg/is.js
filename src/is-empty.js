@@ -8,16 +8,6 @@ const isFunction = require('./is-function');
 const isSet = require('./is-set');
 const isMap = require('./is-map');
 
-/**
- * number 0 and whitespace are not considered empty.
- * If you want to treat any of them empty then use:
- * @param {string} considerEmpty Possible values are ('zero', 'whitespace')
- *
- * @example
- * isEmpty(valueToCheck, 'zero'); treat number 0 empty
- * isEmpty(valueToCheck, 'whitespace'); treat whitespace empty
- */
-
 module.exports = function isEmpty(val, considerEmpty = null) {
 
   // null and undefined are empty
@@ -59,19 +49,18 @@ module.exports = function isEmpty(val, considerEmpty = null) {
     return true;
   }
 
-  // number - depend upon considerEmpty parameter
+  // number 0 is consider empty
   if (isNumber(val) === true) {
-    if (val === 0 && considerEmpty === 'zero') {
+    if (val === 0) {
       return true;
     }
     return false;
   }
 
   // string with length 0 is empty
+  // whitespace string is consider empty
   if (isString(val) === true) {
-    if (considerEmpty === 'whitespace') {
-      val = val.trim();
-    }
+    val = val.trim();
     return val.length === 0;
   }
 

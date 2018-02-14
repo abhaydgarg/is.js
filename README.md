@@ -32,7 +32,7 @@ import { isEmpty, isString } from '@abhaydgarg/is';
 
 ## API
 
-### Type check
+### 1. Type check
 
 #### isArray(value)
 
@@ -94,13 +94,13 @@ Check if `value` is `null`.
 
 Check if `value` is either `null` or `undefined`.
 
-### Presence check
+### 2. Emptiness check
 
 #### isEmpty(value)
 
 Check if `value` is empty.
 
-#### All below return `true`
+**All below return `true`**
 
 ```javascript
 isEmpty(null);
@@ -111,27 +111,12 @@ isEmpty(new Error()); // without message
 isEmpty(new Set()); // Set size 0
 isEmpty(new Map()); // Map size 0
 isEmpty({});
+isEmpty(0);
 isEmpty(''); // string length 0
+isEmpty(' ') // whitespace string is consider empty
 ```
 
-#### All below return `false`
-
-```javascript
-isEmpty(0); // 0 consider not empty
-isEmpty(' ') // whitespace consider not empty
-```
-
-#### Special cases
-
-* Pass second parameter `'zero'` to consider number `0` empty.
-* Pass second parameter `'whitespace'` to consider whitespace string empty.
-
-```javascript
-isEmpty(0, 'zero'), // consider number 0 empty.
-isEmpty(' ', 'whitespace') // consider whitespace string empty
-```
-
-### Value check
+### 3. Value check
 
 #### isNumeric(value)
 
