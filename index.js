@@ -16,6 +16,10 @@ module.exports.isFunction = require('./src/is-function');
 module.exports.isNumeric = require('./src/is-numeric');
 module.exports.isEmpty = require('./src/is-empty');
 module.exports.isWhitespace = require('./src/is-whitespace');
+module.exports.isInteger = require('./src/is-integer');
+module.exports.isFloat = require('./src/is-float');
+module.exports.isUrl = require('./src/is-url');
+module.exports.isEmail = require('./src/is-email');
 
 
 

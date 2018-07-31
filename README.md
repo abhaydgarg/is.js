@@ -17,7 +17,7 @@ npm install --save @abhaydgarg/is
 npm run test
 
 # single file
-FILE=is-string.test.js npm run test-file
+FILE=is-string.test.js npm run test:file
 ```
 
 ## Usage
@@ -131,6 +131,22 @@ isNumeric('Infinity'); // true
 isNumeric('0xFF') // true
 isNumeric('123e5');  // true
 ```
+
+#### isInteger(value)
+
+Check if `value` of type `number` is integer (whole number).
+
+#### isFloat(value)
+
+Check if `value` of type `number` is float (fractional number).
+
+#### isUrl(value)
+
+Check if `value` is url.
+
+#### isEmail(value)
+
+Check if `value` is email.
 
 #### isWhitespace(value)
 

@@ -1,11 +1,11 @@
 {
   "name": "@abhaydgarg/is",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Javascript checking library",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha test",
-    "test-file": "./node_modules/mocha/bin/mocha test/$FILE"
+    "test:file": "./node_modules/mocha/bin/mocha test/$FILE"
   },
   "repository": {
     "type": "git",
