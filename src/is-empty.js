@@ -8,7 +8,7 @@ const isFunction = require('./is-function');
 const isSet = require('./is-set');
 const isMap = require('./is-map');
 
-module.exports = function isEmpty(val, considerEmpty = null) {
+module.exports = function isEmpty(val) {
 
   // null and undefined are empty
   if (isNullOrUndefined(val) === true) {
